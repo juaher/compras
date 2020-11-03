@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi aplicación ASP.NET</title>
+    <link rel="icon" href="~/Content/assets/img/icon.ico" type="image/x-icon" />
+
+    <!-- Fonts and icons -->
+    <div class="main-panel">
+        <div class="content">
+            @Scripts.Render("~/Content/assets/js/plugin/webfont/webfont.min.js")
+        </div>
+    </div>
+            @*<script src="../assets/js/plugin/webfont/webfont.min.js"></script>*@
+            <script>
+                WebFont.load({
+                    google: { "families": ["Lato:300,400,700,900"] },
+                    custom: { "families": ["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['../Content/assets/css/fonts.min.css'] },
+                    active: function () {
+                        sessionStorage.fonts = true;
+                    }
+                });
+            </script>
+
+            <!-- CSS Files -->
+            @Styles.Render("~/Content/assets/css/bootstrap.min.css")
+            @Styles.Render("~/Content/assets/css/atlantis.min.css")
+            @*<link rel="stylesheet" href="../assets/css/bootstrap.min.css">*@
+            @*<link rel="stylesheet" href="../assets/css/atlantis.min.css">*@
+
+            <!-- CSS Just for demo purpose, don't include it in your project -->
+            @*@Styles.Render("~/Content/css")
+                @Scripts.Render("~/bundles/modernizr")*@
+            <!-- Navbar Header -->
+            <div class="wrapper">
+                <div class="main-header">
+                    <!-- Logo Header -->
+                    <div class="logo-header" data-background-color="blue">
+
+                        @*<a href="../index.html" class="logo">
+                                <img src="../Content/assets/img/logo.png" alt="navbar brand"  class="avatar-img rounded-circle">
+                            </a>*@
+                        <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon">
+                                <i class="icon-menu"></i>
+                            </span>
+                        </button>
+                        <button class="topbar-toggler more"><i class="icon-options-vertical"></i></button>
+                        <div class="nav-toggle">
+                            <button class="btn btn-toggle toggle-sidebar">
+                                <i class="icon-menu"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- End Logo Header -->
+                    <!-- Navbar Header -->
+                    <nav class="navbar navbar-header navbar-expand-lg" data-background-color="blue2">
+
+
+                    </nav>
+                    <!-- End Navbar -->
+                </div>
+
+
+
+
+</head>
+<body>
+    <div class="sidebar sidebar-style-2">
+
+        <div class="sidebar-wrapper scrollbar scrollbar-inner">
+            <div class="sidebar-content">
+                <div class="user">
+                    <div class="avatar-sm float-left mr-2">
+                        <img src="../Content/assets/img/default.jpg" alt="..." class="avatar-img rounded-circle">
+                    </div>
+                    <div class="info">
+                        <a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
+                            <span>
+                                John Doe
+                                <span class="user-level">Administrator</span>
+                                <span class="caret"></span>
+                            </span>
+                        </a>
+                        <div class="clearfix"></div>
+
+                        <div class="collapse in" id="collapseExample">
+                            <ul class="nav">
+                                <li>
+                                    <a href="#profile">
+                                        <span class="link-collapse">My Profile</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#edit">
+                                        <span class="link-collapse">Edit Profile</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#settings">
+                                        <span class="link-collapse">Settings</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <ul class="nav nav-primary">
+
+
+                    <li class="nav-item active submenu">
+                        <a data-toggle="collapse" href="#base">
+                            <i class="fas fa-layer-group"></i>
+                            <p>Menú</p>
+                            <span class="caret"></span>
+                        </a>
+                        <div class="collapse show" id="base">
+                            <ul class="nav nav-collapse">
+                                <li class="active">
+                                    <a href="Clientes.cshtml">
+                                        <span class="sub-item">Clientes</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../components/buttons.html">
+                                        <span class="sub-item">Productos</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../components/gridsystem.html">
+                                        <span class="sub-item">Reporte</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer class="footer">
+            <div class="container-fluid">
+                <nav class="pull-left">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.themekita.com">
+                                ThemeKita
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Help
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Licenses
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="copyright ml-auto">
+                    2018, made with <i class="fa fa-heart heart text-danger"></i> by <a href="https://www.themekita.com">ThemeKita</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <!--   Core JS Files   -->
+    @Scripts.Render("~/Content/assets/js/core/jquery.3.2.1.min.js")
+        @Scripts.Render("~/Content/assets/js/core/popper.min.js")
+        @Scripts.Render("~/Content/assets/js/core/bootstrap.min.js")
+    <!-- jQuery UI -->
+    @Scripts.Render("~/Content/assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js")
+    @Scripts.Render("~/Content/assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js")
+
+    <!-- jQuery Scrollbar -->
+    @Scripts.Render("~/Content/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js")
+    <!-- Atlantis JS -->
+    @Scripts.Render("~/Content/assets/js/atlantis.min.js")
+    <!-- Atlantis DEMO methods, don't include it in your project! -->
+    
+
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
