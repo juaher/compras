@@ -12,11 +12,20 @@ var btnAgregar = $('[name ="btnagregar"]');
 
 var articulos = new Array();
 
+var clear = function () {
+    selectArticulo.val("");
+    inputNumero.val(0);
+    inputCantidad.val(0);
+    inputValor.val(0);
+};
+
+clear();
+
 var generarTabla = function () {
-    tbodyArticulo.empty();
+    tbodyArticulo.html("");
     var text = "";
     for (i = 0; i < articulos.length; i++) {
-        text = "<tr>";
+        text += "<tr>";
         text += "<td>" + articulos[i].idArticulo + "</td>";
         text += "<td>" + articulos[i].numero + "</td>";
         text += "<td>" + articulos[i].cantidad + "</td>";
@@ -40,6 +49,20 @@ var agregarArticulo = function () {
     articulo.articulo = articulo;
     articulos.push(articulo);
     generarTabla();
+    clear();
 }
 
-    btnAgregar.on("click", agregarArticulo);
+var funcCancelar = function () {
+    articulos = new Object();
+    clear();
+};
+
+var funcAceptar = function () {
+    
+};
+
+btnAgregar.on("click", agregarArticulo);
+
+btnCancelar.on("click", funcCancelar);
+
+btnAceptar.on("click", funcAceptar);

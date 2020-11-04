@@ -84,7 +84,7 @@
 
     <div class="col-md-12">
 
-        <div class="table-responsive">
+        <div class="table-responsive" style="min-height: 200px; max-height:200px; overflow: auto;">
             <table id="add-row" class="display table table-striped table-hover">
                 <thead>
                     <tr>
@@ -101,6 +101,13 @@
     </div>
 
 
+</div>
+
+<div class="float-right" style="padding-top:10px;">
+    <div class="card-action">
+        <button name="btnaceptar" class="btn btn-success">Aceptar</button>
+        <button name="btnacancelar" class="btn btn-danger">Cancelar</button>
+    </div>
 </div>
 
 @Scripts.Render("~/Content/assets/js/modulos/registro.js")
