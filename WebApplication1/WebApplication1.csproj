@@ -138,7 +138,9 @@
     <Compile Include="Controllers\api\ArticulosApiController.cs" />
     <Compile Include="Controllers\api\PedidoApiController.cs" />
     <Compile Include="Controllers\api\PersonaApiController.cs" />
-    <Compile Include="Controllers\ClientesController.cs" />
+    <Compile Include="Controllers\ReporteController .cs" />
+    <Compile Include="Controllers\PedidoController .cs" />
+    <Compile Include="Controllers\RegistrarController.cs" />
     <Compile Include="Controllers\connection\ConnectionSqlServer.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -490,6 +492,8 @@
     <Content Include="Content\assets\js\core\jquery.3.2.1.min.js" />
     <Content Include="Content\assets\js\core\popper.min.js" />
     <Content Include="Content\assets\js\demo.js" />
+    <Content Include="Content\assets\js\modulos\registro.js" />
+    <Content Include="Content\assets\js\modulos\init.js" />
     <Content Include="Content\assets\js\plugin\bootstrap-notify\bootstrap-notify.min.js" />
     <Content Include="Content\assets\js\plugin\chart-circle\circles.min.js" />
     <Content Include="Content\assets\js\plugin\chart.js\chart.min.js" />
@@ -744,7 +748,9 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
-    <Content Include="Views\Clientes\Index.cshtml" />
+    <Content Include="Views\Registrar\Index.cshtml" />
+    <Content Include="Views\Pedido\Index.cshtml" />
+    <Content Include="Views\Reporte\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
