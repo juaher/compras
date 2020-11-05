@@ -8,13 +8,14 @@ using RouteAttribute = System.Web.Http.RouteAttribute;
 
 namespace WebApplication1.Controllers.api
 {
-    [Route("api/personas")]
+    [RoutePrefix("api/personas")]
     public class PersonaApiController : ApiController
     {
-        
-        public IHttpActionResult Get(int tipo)
+
+        [Route("{Tipo:int}")]
+        public IHttpActionResult Get(int Tipo)
         {
-            return Json(new Persona().GetPersonas(null, tipo));
+            return Json(new Persona().GetPersonas(null, Tipo));
         }
 
 

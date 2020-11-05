@@ -8,13 +8,19 @@ using RouteAttribute = System.Web.Http.RouteAttribute;
 
 namespace WebApplication1.Controllers.api
 {
-    [Route("api/articulos")]
+    [RoutePrefix("api/articulos")]
     public class ArticulosApiController : ApiController
     {
-        [Route("{IdPedido:long}")]
-        public IHttpActionResult Get(long IdPedido)
+        [Route("PorPedido/{IdPedido:long}")]
+        public IHttpActionResult GetPorPedido(long IdPedido)
         {
             return Json(new Articulo().GetArticulos(IdPedido));
+        }
+
+        [Route("")]
+        public IHttpActionResult Get()
+        {
+            return Json(new Articulo().GetArticulos(null));
         }
 
     }
