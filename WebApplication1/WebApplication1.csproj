@@ -492,6 +492,7 @@
     <Content Include="Content\assets\js\core\jquery.3.2.1.min.js" />
     <Content Include="Content\assets\js\core\popper.min.js" />
     <Content Include="Content\assets\js\demo.js" />
+    <Content Include="Content\assets\js\modulos\pedido.js" />
     <Content Include="Content\assets\js\modulos\registro.js" />
     <Content Include="Content\assets\js\modulos\init.js" />
     <Content Include="Content\assets\js\plugin\bootstrap-notify\bootstrap-notify.min.js" />
@@ -735,8 +736,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />
